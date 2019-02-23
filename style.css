@@ -71,6 +71,11 @@ img {
 .sidebar-right ul li {
   padding: 20px;
 }
+span {
+  background: black;
+    color:white;
+    font-family: monospace;
+}
 /*Make website Responsive*/
 @media screen and (max-width: 600px) {
   .wraper {
