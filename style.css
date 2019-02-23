@@ -1,106 +1,148 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 body {
-    min-height: 100%;
-    margin: 0;
-    font-family: 'Indie Flower', cursive;
-    background-image: url("img/brayden-law-1359684-unsplash.jpeg");
+  text-align: center;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+}
+/*Setting grid*/
+.wraper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: auto 500px auto;
+  grid-template-areas: "sr hd hd sl " "sr main main sl " "ft ft ft ft  ";
+  height: 100%;
 }
 header {
-    grid-area: hd;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 10px;
-}
-.wraper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    grid-template-rows: auto 500px auto;
-    grid-template-areas: "sr hd hd sl " "sr main main sl " "ft ft ft ft  ";
-    height: 100%;
+  grid-area: hd;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 10px;
 }
 .picture-left {
-    border: 2px solid black;
-    grid-area: sl;
-    padding-top: 50px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 116, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  padding-top: 50px;
+  object-fit: contain;
+  width: 100%;
+  border: 2px solid black;
+  grid-area: sl;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 116, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 .sidebar-right h1 {
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 0;
-}
-.sidebar-right {
-    border: 2px solid black;
-    padding-top: 40px;
-    grid-area: sr;
-    font-size: 20px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 116, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0;
 }
 .main {
-    grid-area: main
+  grid-area: main
 }
 footer {
-    background: rgb(62, 66, 71);
-    grid-area: ft;
-    height: 80px;
-    color: white;
-    font-size: 35px;
-    padding-bottom: 30px;
+  background: rgb(62, 66, 71);
+  grid-area: ft;
+  color: white;
+  font-size: 15px;
+  padding:30px;
+}
+.sidebar-right {
+  border: 2px solid black;
+  padding-top: 40px;
+  grid-area: sr;
+  font-size: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 116, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .sidebar-right a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .sidebar-right ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 .sidebar-right ul li {
-    padding: 20px;
+  padding: 20px;
 }
+/*Make website Responsive*/
 @media screen and (max-width: 600px) {
-    .wraper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "hd hd  "
-                             "main main"
-                             " sl sl "
-                             "sr sr"
-                             "ft ft  ";
-    }
-    .sidebar-right ul {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-    .sidebar-right ul {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        text-align: center;
-    }
-    footer {
-        height: auto;
-    }
-    .sidebar-right {
-        width:500x;
-    }
+  .wraper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hd hd  " "main main" " sl sl " "sr sr" "ft ft  ";
+  }
+  img {
+    border-radius: 0;
+    object-fit: cover;
+    width: 100%
+  }
+  .sidebar-right ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .sidebar-right ul {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    text-align: center;
+  }
+  footer {
+    height: auto;
+  }
+  .sidebar-right {
+    width: auto;
+  }
 }
 hr.hr-side-right {
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  .wraper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hd hd  " "main main" " sl sl " "sr sr" "ft ft  ";
+  }
+  img {
+    border-radius: 0;
+    object-fit: cover;
+    width: 100%
+  }
+  /* .picture-left{
+        object-fit: cover;
+        width: 100%
+    }*/
+  .sidebar-right ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .sidebar-right ul {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    text-align: center;
+  }
+  footer {
+    height: auto;
+  }
+  .sidebar-right {
+    width: auto;
+  }
+}
+hr.hr-side-right {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
 }
