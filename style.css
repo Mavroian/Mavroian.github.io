@@ -22,11 +22,12 @@ header {
   padding-top: 10px;
 }
 .picture-left {
- 
+   padding-top: 30px;
   object-fit: contain;
   width: 100%;
   border: 2px solid black;
   grid-area: sl;
+ 
   background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 116, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 .sidebar-right h1 {
@@ -66,6 +67,11 @@ img {
 }
 .sidebar-right a {
   text-decoration: none;
+  color:#131634;
+}
+.sidebar-right a :hover{
+  color:white;
+  font-size: 25px;
 }
 .sidebar-right ul {
   list-style-type: none;
@@ -73,10 +79,17 @@ img {
 .sidebar-right ul li {
   padding: 20px;
 }
+.sidebar-right h1{
+  font-family:fantasy;
+}
 span {
   background: black;
     color:white;
     font-family: monospace;
+}
+h2{
+  text-align: center;
+  
 }
 hr.hr-side-right {
   height: 30px;
@@ -85,6 +98,7 @@ hr.hr-side-right {
   border-width: 1px 0 0 0;
   border-radius: 20px;
 }
+
 p {
   text-indent: 30px;
   
