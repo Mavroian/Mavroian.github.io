@@ -4,7 +4,6 @@ html {
 body {
   text-align:left;
   min-height: 100%;
-  margin: 0;
   font-family: 'Indie Flower', cursive;
 }
 /*Setting grid*/
@@ -36,6 +35,8 @@ header {
   margin-bottom: 0;
 }
 .main {
+  
+  padding:10px;
   grid-area: main
   
 }
