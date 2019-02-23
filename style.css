@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  text-align: center;
+  text-align:left;
   min-height: 100%;
   margin: 0;
   font-family: 'Indie Flower', cursive;
@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  grid-template-rows: auto 500px auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: "sr hd hd sl " "sr main main sl " "ft ft ft ft  ";
   height: 100%;
 }
@@ -23,7 +23,7 @@ header {
   padding-top: 10px;
 }
 .picture-left {
-  padding-top: 50px;
+ 
   object-fit: contain;
   width: 100%;
   border: 2px solid black;
@@ -37,6 +37,7 @@ header {
 }
 .main {
   grid-area: main
+  
 }
 footer {
   background: rgb(62, 66, 71);
@@ -76,35 +77,6 @@ span {
     color:white;
     font-family: monospace;
 }
-/*Make website Responsive*/
-@media screen and (max-width: 600px) {
-  .wraper {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "hd hd  " "main main" " sl sl " "sr sr" "ft ft  ";
-  }
-  img {
-    border-radius: 0;
-    object-fit: cover;
-    width: 100%
-  }
-  .sidebar-right ul {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .sidebar-right ul {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    text-align: center;
-  }
-  footer {
-    height: auto;
-  }
-  .sidebar-right {
-    width: auto;
-  }
-}
 hr.hr-side-right {
   height: 30px;
   border-style: solid;
@@ -112,10 +84,17 @@ hr.hr-side-right {
   border-width: 1px 0 0 0;
   border-radius: 20px;
 }
+p {
+  text-indent: 30px;
+  
+}
+/*Make website Responsive*/
+
+
 @media screen and (max-width: 800px) {
   .wraper {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "hd hd  " "main main" " sl sl " "sr sr" "ft ft  ";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "hd  " "main " "  sl " " sr" " ft  ";
   }
   img {
     border-radius: 0;
